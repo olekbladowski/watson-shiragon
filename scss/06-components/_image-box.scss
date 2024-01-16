@@ -1,0 +1,45 @@
+@use '../01-settings/' as *;
+@use '../02-tools/' as *;
+
+.image-box {
+    border-radius: .6rem;
+    box-shadow: 0 0 15px rgb(244, 244, 244);
+    cursor: pointer;
+    background-color: rgba($color: #eaeaea3c, $alpha: 0.8);
+
+    &:hover{
+        box-shadow: 0 0 25px gray;
+    }
+
+    &__image {
+        background: url('../assets/img/ribbon.webp') center no-repeat;
+        height: 22rem;
+        background-size: contain;
+        display: block;
+        border-top-left-radius: .6rem;
+        border-top-right-radius: .6rem;
+
+        &--next{
+            background: url('../assets/img/ribbon.webp') center no-repeat;
+            background-size: contain;
+        }
+
+        @include medium {
+            height: 16rem;
+        }
+    }
+
+    &__txt-title {
+        text-align: center;
+        padding: 1.5rem;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    
+    &__txt-description {
+        text-align: center;
+        padding: 1.5rem;
+        font-size: 1.6rem;
+    }
+}

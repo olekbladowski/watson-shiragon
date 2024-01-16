@@ -1,0 +1,125 @@
+@use '../01-settings/' as *;
+@use '../02-tools/' as *;
+
+.menu-element {
+    cursor: pointer;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+
+    @include medium{
+        width: 20rem;
+    }
+    
+    &:hover{
+        color: $color-black;
+        scale: 1.05;
+    }
+
+    &--1{
+        // display: none;
+        @include medium{
+            display: inline;
+            position: absolute;
+            bottom: 40%;
+            left: 5%;
+        }
+
+        @include large{
+            display: inline;
+            position: absolute;
+            bottom: 40%;
+            left: 15%;
+        }
+    }
+
+    &--2{
+        // display: none;
+
+        @include medium{
+            display: inline;
+            position: absolute;
+            bottom: 10%;
+            left: 10%;
+        }
+
+        @include large{
+            display: inline;
+            position: absolute;
+            bottom: 10%;
+            left: 20%;
+        }
+    }
+    &--3{
+        // display: none;
+
+        @include medium{
+            display: inline;
+            position: absolute;
+            bottom: 40%;
+            right: 5%;
+        }
+        @include large{
+            display: inline;
+            position: absolute;
+            bottom: 40%;
+            right: 15%;
+        }
+    }
+    &--4{
+        // display: none;
+        @include medium{
+            display: inline;
+            position: absolute;
+            bottom: 10%;
+            right: 10%;
+        }
+        @include large{
+            display: inline;
+            position: absolute;
+            bottom: 10%;
+            right: 20%;
+        }
+    }
+
+
+    &__image {
+        background: url('../assets/img/paw-1.webp') center no-repeat;
+        background-size: contain;
+        height: 5rem;
+        width: 5rem;
+        display: block;
+
+        @include medium {
+            height: 20rem;
+            width: 20rem;
+        }
+
+        &--mobile{
+            @include medium {
+                display: none;
+            }
+        }
+    }
+
+
+    &__text {
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Titillium Web', sans-serif;
+        font-weight: bold;
+        font-size: 2.5rem;
+        padding: 0.2rem;
+        width: 20rem;
+        color: $color-white;
+        @include medium{
+            padding: 0.1rem;
+            font-size: 2.8rem;
+            width: 20rem;
+        }
+    }
+
+}

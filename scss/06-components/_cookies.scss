@@ -1,0 +1,31 @@
+@use '../01-settings/' as *;
+@use '../02-tools/' as *;
+
+.cookies{
+    background-color: $color-bg-footer;
+    color: $color-white;
+    display: flex;
+    flex-direction: column;
+
+    @include medium{
+        flex-direction: row;
+    }
+
+    @include large{
+        flex-direction: row;
+    }
+
+    &__close{
+        border: 1px solid $color-white;
+        border-radius: .6rem;
+        padding: 15px;
+        transition: .5s;
+        cursor: pointer;
+
+        &:hover{
+            background-color: $color-white;
+            color: $color-bg-footer;
+        }
+
+    }
+}
